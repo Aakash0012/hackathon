@@ -1,5 +1,5 @@
 
-def run(led_on):
+def run(tubelight):
     from firebase_admin import credentials
     import firebase_admin, os
 
@@ -15,8 +15,9 @@ def run(led_on):
         firebase_admin.initialize_app(cred, path)
 
     from firebase_admin import db
-    refv = db.reference('iot/led')
+    refv = db.reference('iot/tubelight')
 
-    refv.set(led_on)
+    refv.set(tubelight)
     g = refv.get()
     return g
+    

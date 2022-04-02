@@ -12,18 +12,18 @@
 
     <body>
         <center>
-            {% if led_on == 1 %}
-                <img src="../static/pic_bulbon.gif">
+            {% if tubelight == 1 %}
+                <img src="../static/tube_on.jpg">
             {% else %}
-                <img src="../static/pic_bulboff.gif">
+                <img src="../static/tube_off.jpg">
             {% endif %}
 
             <form method="POST" action="/automated">
-                <label for="led_on">LED ON</label>
-                <input type="radio" id="led_on" name="geto" value="1"><br><br>
+                <label for="tubelight">bulb ON</label>
+                <input type="radio" id="tubelight" name="geto" value="1"><br><br>
 
-                <label for="led_off">LED OFF</label>
-                <input type="radio" id="led_off" name="geto" value="0"><br><br>
+                <label for="tubelight">bulb OFF</label>
+                <input type="radio" id="tubelight" name="geto" value="0"><br><br>
 
                 <input type="submit" value="Submit">
             </form>
